@@ -88,7 +88,6 @@ function App() {
                         <li>
                             <img src="/assets/calendar_icon.png" alt="Today Icon" />
                             <a href="#">Today</a>
-                            <span className="task-count">{tasks.length}</span>
                         </li>
                         <li>
                             <img src="/assets/upcoming_icon.png" alt="Upcoming Icon" />
