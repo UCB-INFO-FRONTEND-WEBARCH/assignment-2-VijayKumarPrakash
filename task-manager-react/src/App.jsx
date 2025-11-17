@@ -7,6 +7,7 @@ import './App.css';
 function App() {
     const [tasks, setTasks] = useState([]);
     const [filter, setFilter] = useState('all');
+    const [sidebarOpen, setSidebarOpen] = useState(true);
 
     // Add a new task
     const handleAddTask = (taskText) => {
@@ -61,7 +62,12 @@ function App() {
     return (
         <>
             <header className="main-header">
-                <img src="/assets/menu_icon.png" alt="Menu Icon" />
+                <img
+                    src="/assets/menu_icon.png"
+                    alt="Menu Icon"
+                    onClick={() => setSidebarOpen(!sidebarOpen)}
+                    style={{ cursor: 'pointer' }}
+                />
                 <div id="search-bar-element">
                     <img src="/assets/search_icon.png" alt="Search Icon" />
                     <input type="text" id="search-term" placeholder="Quick Find..." />
@@ -70,7 +76,7 @@ function App() {
             </header>
 
             <article>
-                <nav className="sidebar">
+                <nav className={`sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
                     <ul>
                         <li>
                             <img src="/assets/inbox_icon.png" alt="Inbox Icon" />

@@ -20,6 +20,12 @@ html {
 .main-header img {
     width: 30px;
     height: 30px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.main-header img:hover {
+    opacity: 0.8;
 }
 
 /* ========== NAVIGATION STYLES ========== */
@@ -127,6 +133,18 @@ nav {
     background-color: #fefbf2;
     color: #000000;
     padding: 10px 0;
+    transition: all 0.3s ease;
+}
+
+nav.open {
+    width: 300px;
+    display: block;
+}
+
+nav.closed {
+    width: 0;
+    overflow: hidden;
+    padding: 0;
 }
 
 li {
